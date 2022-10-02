@@ -1,23 +1,13 @@
-import { MDXProvider } from '@mdx-js/react'
-import { NextSeo } from 'next-seo'
-import getComponents, { MDXComponentsType } from '~/lib/getComponents'
+import { MDXProvider } from "@mdx-js/react";
 
-interface Props {
-  meta: {
-    author: string
-    type: MDXComponentsType
-  }
-}
+import getComponents from "~/lib/getComponents";
 
-const ContentsLayout: React.FC<Props> = (props: any) => {
+const ContentsLayout: React.FC<any> = (props: any) => {
   return (
-    <>
-      <NextSeo {...props.meta} />
-      <MDXProvider components={getComponents(props.meta.type)}>
-        <div className="prose mx-auto my-32">{props.children}</div>
-      </MDXProvider>
-    </>
-  )
-}
+    <MDXProvider components={getComponents()}>
+      <div className="prose mx-auto my-32">{props.children}</div>
+    </MDXProvider>
+  );
+};
 
-export default ContentsLayout
+export default ContentsLayout;

@@ -28,22 +28,3 @@ a {
     background: white;
   }
 }
-
-/**
-** article hacks 
-**/
-
-/**
-** this targets headers in the number sections and aligns them properly with the number
-** also to remove the margin on top so it aligns
-**/
-
-.remove-header-margin h1:first-child,
-.remove-header-margin h2:first-child,
-.remove-header-margin h3:first-child,
-.remove-header-margin h4:first-child,
-.remove-header-margin h5:first-child,
-.remove-header-margin h6:first-child {
-  margin-top: 0;
-  line-height: 1.2;
-}

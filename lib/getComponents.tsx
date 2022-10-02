@@ -1,17 +1,11 @@
-import Image from "next/image";
-import NumberSection from "~/components/NumberSection";
 import { CH } from "@code-hike/mdx/components";
 
-export type MDXComponentsType = "guide" | "blog" | "lp";
-
-export default function mdxComponents(type: MDXComponentsType) {
+export default function mdxComponents() {
   const components = {
-    // random custom component
-    NumberSection: (props: any) => {
-      return <NumberSection {...props} />;
-    },
-    // code hike component
+    // replace code hike components here
     CH,
+    // just an example i am replacing any p tag like this
+    p: (props: any) => <p className="custom-p" {...props} />,
   };
 
   return components;
